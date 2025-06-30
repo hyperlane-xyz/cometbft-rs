@@ -44,7 +44,7 @@ error[E0152]: found duplicate lang item `panic_impl`
  */
 #[cfg(feature = "panic-handler")]
 #[panic_handler]
-#[no_mangle]
+#[unsafe(no_mangle)]
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
