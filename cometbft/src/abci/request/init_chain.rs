@@ -2,7 +2,6 @@ use bytes::Bytes;
 
 use crate::{block, consensus, prelude::*, validator, Time};
 
-#
 #[doc = include_str!("../doc/request-initchain.md")]
 #[derive(Clone, PartialEq, Eq, Debug)]
 pub struct InitChain {
