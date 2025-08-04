@@ -83,7 +83,8 @@ pub struct Response {
     pub end_block_events: Option<Vec<abci::Event>>,
 
     /// Validator updates (might be explicit null)
-    #[serde(deserialize_with = "serializers::nullable::deserialize")]
+    // #[serde(deserialize_with = "serializers::nullable::deserialize")]
+    #[serde(default, skip_deserializing)]
     pub validator_updates: Vec<validator::Update>,
 
     /// New consensus params (might be explicit null)
