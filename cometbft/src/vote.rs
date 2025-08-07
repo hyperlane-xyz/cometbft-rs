@@ -49,6 +49,7 @@ pub struct Vote {
     pub validator_index: ValidatorIndex,
 
     /// Signature
+    #[serde(skip_deserializing, default)]
     pub signature: Option<Signature>,
 
     /// Vote extension provided by the application.
@@ -56,6 +57,7 @@ pub struct Vote {
     ///
     /// This field has been added in CometBFT 0.38 and will be ignored when
     /// encoding into earlier protocol versions.
+    #[serde(skip_deserializing, default)]
     pub extension: Vec<u8>,
 
     /// Vote extension signature by the validator
@@ -63,6 +65,7 @@ pub struct Vote {
     ///
     /// This field has been added in CometBFT 0.38 and will be ignored when
     /// encoding into earlier protocol versions.
+    #[serde(skip_deserializing, default)]
     pub extension_signature: Option<Signature>,
 }
 
